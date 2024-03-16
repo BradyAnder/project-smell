@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
 
     private void Awake()
     {
+        //Finds the generate Landmark object within a scene and references the generator script off of it 
         GameObject landmarkGeneratorObject = GameObject.Find("LandmarkGenerator");
         landmarkGenScript = landmarkGeneratorObject.GetComponent<LandmarkGen>();
 
@@ -22,7 +23,8 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(isNorth == true)
+        //Determines the direction the generated Landmark should face 
+        if (isNorth == true)
         {
             landmarkGenScript.Generate(transform.position, new Vector3(0,180,0));
         }
