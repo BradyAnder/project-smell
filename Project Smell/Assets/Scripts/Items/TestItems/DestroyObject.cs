@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyObject : MonoBehaviour, IInteractable
 {
+
     public void Interact()
     {
         Destroy(gameObject);
