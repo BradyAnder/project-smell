@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
+    private Inventory inventory;
 
     public float speed = 12f;
     public float gravity = -9.81f;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     // Update is called once per frame
@@ -41,5 +43,26 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            inventory.SetSelectedIndex(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            inventory.SetSelectedIndex(1); 
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            inventory.SetSelectedIndex(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            inventory.SetSelectedIndex(3);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            inventory.SetSelectedIndex(4);
+        }
     }
 }
