@@ -7,15 +7,20 @@ public class Spawn : MonoBehaviour
 {
     public GameObject item;
     private Transform player;
+    Rigidbody rb;
+    
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = item.GetComponent<Rigidbody>();
+        
     }
 
     public void SpawnDroppedItem()
     {
-        Vector3 playerPos = new Vector3 (player.position.x, player.position.y, player.position.z);
-        Instantiate(item, playerPos, Quaternion.identity);
+        Vector3 playerForward = player.forward;
+        Vector3 spawnPosition = player.position + playerForward * 4f;
+        Instantiate(item, spawnPosition, Quaternion.identity);
     }
 }
