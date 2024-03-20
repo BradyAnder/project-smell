@@ -18,7 +18,9 @@ public class ItemSpawner : MonoBehaviour
         {
             int ranItem = Random.Range(0, items.Count);
             Instantiate(items[ranItem], transform.position, Quaternion.identity);
+
         }
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
