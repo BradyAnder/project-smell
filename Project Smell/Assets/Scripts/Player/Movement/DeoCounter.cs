@@ -5,7 +5,15 @@ using UnityEngine;
 public class DeoCounter: MonoBehaviour
 {
     public int DeoCollected;
-    public List<GameObject> deodorant = new List<GameObject>();
+
+    public bool love;
+    public bool newSpice;
+    public bool foreign;
+    public bool jax;
+    public bool fahrenheit;
+    public bool rebreeze;
+    public bool jett;
+    public bool anivia;
 
     // Start is called before the first frame update
     void Start()

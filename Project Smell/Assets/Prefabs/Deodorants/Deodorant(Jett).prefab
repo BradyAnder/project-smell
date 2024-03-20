@@ -118,4 +118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77e373865368215439732ff8bc6df69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deoObject: {fileID: 7902185689190327701}
+  isLove: 0
+  isNewSpice: 0
+  isForeign: 0
+  isJax: 0
+  isFahrenheit: 0
+  isRebreeze: 0
+  isJett: 1
+  isAnivia: 0
